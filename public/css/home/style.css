@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: black;
+    --secondary-color: #f9f9f9;
+    --tertiary-color: rgb(83, 92, 255);
+}
+
+/* :root {
+    --primary-color: #f9f9f9;
+    --secondary-color: rgb(23, 22, 22);
+    --tertiary-color: rgb(83, 92, 255);
+} */
+
+body {
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--secondary-color);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+    background: url('https://images.unsplash.com/photo-1557683316-973673baf926') no-repeat center center/cover;
+}
+
+#statusContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-width: 18em;
+}
+
+#statusContainer li {
+    list-style: none;
+    margin: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--secondary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#statusContainer li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#statusContainer li span {
+    font-weight: bold;
+}
+
+#copyDiv {
+    border: 1px solid var(--primary-color);
+    border-radius: 0.4em;
+    padding: 0.3em 1em;
+    top: 0;
+    right: 0;
+    position: absolute;
+    background-color: var(--tertiary-color);
+}
+
+#copyDiv h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+#submitBtn {
+    padding: 0.5em 1em;
+    border: none;
+    background-color: var(--tertiary-color);
+    border: 2px solid var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#submitBtn:hover {
+    background-color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+    color: var(--tertiary-color);
+}
+
+#serverIpBox {
+    padding: 0.5em 1em;
+    border: none;
+    background-color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#serverIpBox:hover {
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+#ipDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.3em;
+    min-width: 18em;
+    gap: 0.5em;
+}
