@@ -64,7 +64,6 @@ const submitBtn = document.getElementById('submitBtn');
 submitBtn.addEventListener('click', (e) => {
     e.preventDefault();
     const serverIpBox = document.getElementById('serverIpBox');
-    // serverIP.innerText = serverIpBox.value;
     if (serverIpBox.value.trim() === '') {
         const updateServer = new serverApi("mbs.berrysmp.net");
         updateServer.getServerInfo();
