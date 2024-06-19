@@ -14,6 +14,7 @@ class serverApi {
         fetch(`https://api.mcsrvstat.us/3/${this.serverIP}`)
             .then((res) => res.json())
             .then((data) => {
+                serverIP.innerText = this.serverIP;
                 if (data.online) {
                     mcstatus.textContent = 'online';
                 } else {
@@ -65,7 +66,6 @@ submitBtn.addEventListener('click', (e) => {
     const serverIpBox = document.getElementById('serverIpBox');
     serverIP.innerText = serverIpBox.value;
     if (serverIpBox.value.trim() === '') {
-        serverIP.innerText = 'mbs.berrysmp.net';
         const updateServer = new serverApi("mbs.berrysmp.net");
         updateServer.getServerInfo();
     } else {
