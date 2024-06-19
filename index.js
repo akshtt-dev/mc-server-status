@@ -3,16 +3,16 @@ import { engine } from 'express-handlebars';
 import mongoose from 'mongoose';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-main().catch(err => console.log(err)).finally(() => console.log('Connected to the database!'));
+main().then((res) => console.log("Connected to database.")).catch(err => console.log(err));
 async function main() {
-  await mongoose.connect('mongodb://admin:4NUA8J4LDY8YE4AC@pnode3.danbot.host:5365/?authSource=admin');
+  await mongoose.connect(process.env.MONGO_URI);
 }
 
-import dotenv from 'dotenv';
-dotenv.config();
 const app = express();
 const port = process.env.PORT || 3000;
 
