@@ -21,7 +21,7 @@ Make sure you have the following installed on your system:
 
 2. **Set up environment variables:**
 
-- Copy the example.env file to .env:
+- Copy the `example.env` file to `.env`:
 
   ```bash
   cp example.env .env
