@@ -27,7 +27,7 @@ Make sure you have the following installed on your system:
   cp example.env .env
   ```
   
-- Edit the .env file with your preferred settings.
+- Edit the **`.env`** file with your preferred settings.
 
 3. **Install Node modules:**
   ```bash
