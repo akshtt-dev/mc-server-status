@@ -27,7 +27,7 @@ Make sure you have the following installed on your system:
   cp example.env .env
   ```
   
-- Edit the **`.env`** file with your preferred settings.
+- Edit the `.env` file with your preferred settings.
 
 3. **Install Node modules:**
   ```bash
@@ -38,7 +38,7 @@ Make sure you have the following installed on your system:
 
 You can run the application using one of the following commands:
 
-- Production mode:
+- **Production mode:**
 
   ```bash
   npm start
@@ -50,7 +50,7 @@ You can run the application using one of the following commands:
   node .
   ```
   
-- Development mode (with hot-reloading):
+- **Development mode (with hot-reloading):**
   
   ```bash
   npm run dev
