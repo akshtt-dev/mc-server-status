@@ -1,7 +1,7 @@
 {
   "name": "mc-server-status",
   "version": "1.0.0",
-  "description": "",
+  "description": "This repository contains a Minecraft Server Status website built using Express, Express-Handlebars, and MongoDB. The application allows users to check the status of a Minecraft server, including details such as the number of active players and server uptime. The website is designed to be easy to set up and deploy, with clear instructions .",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,9 +9,13 @@
     "dev": "nodemon ."
   },
   "keywords": ["minecraft"," server", "status", "express", "handlebars", "mongodb", "nodejs", "website"],
+   "repository": {
+    "type": "git",
+    "url": "https://github.com/akshtt-dev/mc-server-status"
+  },
   "type": "module",
-  "author": "",
-  "license": "ISC",
+  "author": "akshtt-dev",
+  "license": "MIT",
   "dependencies": {
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
