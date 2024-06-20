@@ -22,7 +22,7 @@ class serverApi {
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify({ serverIp: this.serverIP }),
+            body: JSON.stringify({ serverIp: this.serverIP, serverIcon: data.icon }),
           })
             .then((response) => response.text())
             .then((data) => {

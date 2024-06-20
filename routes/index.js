@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 
 router.post('/post', async (req, res) => {
     const randomId = Math.floor(Math.random() * 1000);
-    const server = new serverList({ serverIp: req.body.serverIp, id: randomId }); 
+    const server = new serverList({ serverIp: req.body.serverIp, serverIcon: req.body.serverIcon,id: randomId }); 
     await server.save().then(result => {
         res.send('Your server has been added to the database!');
         console.log(`Server added to the database ${req.body.serverIp}`)
@@ -27,7 +27,13 @@ router.post('/post', async (req, res) => {
 // Server List page route
 router.get('/serverlist', (req, res) => {
     serverList.find().then(result => {
-        res.render('serverlist', { title: 'Server List', servers: result });
+        const arr = []
+        const arr2 = []
+        result.map(server => {
+            arr.push(server.serverIp)
+            arr2.push(server.serverIcon)
+        });
+        res.render('serverlist', { title: 'Server List', servers: arr, serverIcons: arr2 });
     }).catch(err => console.log(err));
 });
 

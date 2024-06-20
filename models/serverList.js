@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 
 const serverSchema = new mongoose.Schema({
     serverIp: String,
+    serverIcon: String,
     id: Number
 });
 

@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url(/src/serverlist/bg.jpg) no-repeat center center/cover;
+}
+
+#serverList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3em;
+    justify-content: center;
+    margin: 20em;
+    padding: 3em;
+}
+
+.serverLists {
+    padding: 1em;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.4em;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+}   
