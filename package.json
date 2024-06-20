@@ -8,8 +8,17 @@
     "start": "node .",
     "dev": "nodemon ."
   },
-  "keywords": ["minecraft"," server", "status", "express", "handlebars", "mongodb", "nodejs", "website"],
-   "repository": {
+  "keywords": [
+    "minecraft",
+    " server",
+    "status",
+    "express",
+    "handlebars",
+    "mongodb",
+    "nodejs",
+    "website"
+  ],
+  "repository": {
     "type": "git",
     "url": "https://github.com/akshtt-dev/mc-server-status"
   },
@@ -21,5 +30,8 @@
     "express": "^4.19.2",
     "express-handlebars": "^7.1.2",
     "mongoose": "^8.4.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
   }
 }
