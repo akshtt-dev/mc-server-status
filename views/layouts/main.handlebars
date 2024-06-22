@@ -1,12 +1,32 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{title}}</title>
-    <script src="https://kit.fontawesome.com/f08dd07f6a.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="./css/style.css" />
+    {{#if favicon}}
+      <link rel="shortcut icon" href={{favicon}} type={{faviconFormat}} />
+    {{/if}}
+    {{#if css}}
+      <link rel="stylesheet" href={{css}} />
+    {{/if}}
+    <script
+      src="https://kit.fontawesome.com/f08dd07f6a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <div id="leftNav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/projects">Projects</a></li>
+        </ul>
+      </div>
+      <div id="rightNav"></div>
+    </nav>
     {{{body}}}
-</body>
+  </body>
 </html>

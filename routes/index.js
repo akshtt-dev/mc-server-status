@@ -9,7 +9,10 @@ router.use(express.urlencoded({ extended: true }));
 
 // Home page route
 router.get("/", (req, res) => {
-  res.render("home", { title: "MC Server Status" });
+  res.render("home", {
+    title: "MC Server Status",
+    css: "./css/home/style.css",
+  });
 });
 
 router.post("/post", async (req, res) => {
@@ -46,6 +49,7 @@ router.get("/serverlist", (req, res) => {
         title: "Server List",
         servers: arr,
         serverIcons: arr2,
+        css: "./css/serverlist/style.css",
       });
     })
     .catch((err) => console.log(err));
@@ -54,11 +58,6 @@ router.get("/serverlist", (req, res) => {
 // About Us page route
 router.get("/about", (req, res) => {
   res.render("about", { title: "About Us" });
-});
-
-// Handling 404 errors
-router.use((req, res, next) => {
-  res.status(404).render("404", { title: "404", message: "Page Not Found" });
 });
 
 export default router;

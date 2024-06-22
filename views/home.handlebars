@@ -1,27 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="./css/home/style.css">
-</head>
-<body>
-    <div id="statusContainer">
-        <div>
-            <h1 id="serverName">Server Status</h1>
-            <ul>
-                <li>Server IP: <span id="serverIp" class="serverInfo">null</span></li>
-                <li>Status: <span id="status" class="serverInfo">offline</span></li>
-                <li>Players: <span id="players" class="serverInfo">0/0</span></li>
-                <li>Version: <span id="version" class="serverInfo">N/A</span></li>
-            </ul>
-        </div>
-    </div>
-    <form id="ipDiv" method="post" action="/post">
-        <input type="text" id="serverIpBox" placeholder="Enter Server IP" name="serverIp">
-        <button type="submit" id="submitBtn">Submit</button>
-    </form>
-    <div id="copyDiv">
-        <h3><i class="fa-solid fa-check"></i> Copied</h3>
-    </div>
-    <script src="./js/home/script.js"></script>
-</body>
-</html>
+<div id="statusContainer">
+  <div>
+    <h1 id="serverName">Server Status</h1>
+    <ul>
+      <li>Server IP: <span id="serverIp" class="serverInfo">null</span></li>
+      <li>Status: <span id="status" class="serverInfo">offline</span></li>
+      <li>Players: <span id="players" class="serverInfo">0/0</span></li>
+      <li>Version: <span id="version" class="serverInfo">N/A</span></li>
+    </ul>
+  </div>
+</div>
+<form id="ipDiv" method="post" action="/post">
+  <input
+    type="text"
+    id="serverIpBox"
+    placeholder="Enter Server IP"
+    name="serverIp"
+  />
+  <button type="submit" id="submitBtn">Submit</button>
+</form>
+<div id="copyDiv">
+  <h3><i class="fa-solid fa-check"></i> Copied</h3>
+</div>
+<script src="./js/home/script.js"></script>
